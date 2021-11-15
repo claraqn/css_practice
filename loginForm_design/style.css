@@ -1,0 +1,137 @@
+html {
+  height: 100%;
+}
+body {
+  background: black;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.king {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50em;
+}
+
+.box {
+  padding: 40px;
+  text-align: center;
+  flex: 1;
+}
+
+.box h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.box input[type='text'],
+.box input[type='password'] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.box input[type='text']:focus,
+.box input[type='password']:focus {
+  width: 280px;
+  border-color: #2ecc71;
+}
+
+.box input[type='submit'] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box input[type='submit']:hover {
+  background: #2ecc71;
+}
+
+/* 왼쪽 */
+.loaderCase {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: flex;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  /* pointer-events: all; */
+  animation: animate 5s linear infinite;
+}
+.loader span:nth-child(1) {
+  border-radius: 38% 62% 64% 36% / 43% 35% 65% 57%;
+}
+.loader span:nth-child(2) {
+  animation-direction: reverse;
+  border-radius: 41% 59% 40% 60% / 65% 66% 34% 35%;
+}
+.loader span:nth-child(3) {
+  animation-duration: 3s;
+  border-radius: 73% 27% 56% 44% / 57% 74% 26% 43%;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader h2 {
+  font-weight: 500;
+  font-family: consolas;
+  color: #fff;
+  z-index: 0;
+  /* font-size: 0.5em; */
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}

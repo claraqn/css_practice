@@ -150,14 +150,15 @@ body {
 
 .fa-cloud {
   position: absolute;
-  top: calc(15px * var(--i));
+  top: calc(20px * var(--i));
   left: calc(15px * var(--i));
   font-size: 6em;
   color: #fff;
+  height: 1.2em;
   -webkit-text-stroke: 2px #000;
   z-index: 1;
-  animation: animateClouds 3.5s linear infinite;
-  animation-delay: calc(-1s * var(--i));
+  animation: animateClouds 5s linear infinite;
+  animation-delay: calc(-8s * var(--i));
 }
 @keyframes animateClouds {
   0% {
