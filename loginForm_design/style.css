@@ -3,6 +3,7 @@ html {
 }
 body {
   background: black;
+  /* body 원래 margin이 있기 때문에 이를 0으로 맞춰줘야지만 화면에 딱맞음 */
   margin: 0;
   height: 100%;
   display: flex;
