@@ -1,0 +1,65 @@
+.container {
+  display: grid;
+  /* display: inline-grid; */
+  /* grid-template-columns: 200px 200px 500px; */
+  /* grid-template-columns: 1fr 1fr 1fr */
+  /* grid-template-columns: repeat(3, 1fr) */
+  /* grid-template-columns: 200px 1fr */
+  /* grid-template-columns: 100px 200px auto */
+
+  /* grid-template-rows: 200px 200px 500px; */
+  /* grid-template-rows: 1fr 1fr 1fr */
+  /* grid-template-rows: repeat(3, 1fr) */
+  /* grid-template-rows: 200px 1fr */
+  /* grid-template-rows: 100px 200px auto */
+
+  /* grid-template-columns: repeat(5, 1fr); */
+  /* grid-template-columns: repeat(3, 1fr 4fr 2fr); */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr */
+
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-rows: repeat(3, minmax(100px, auto)); */
+
+  /* grid-template-columns: repeat(auto-fill, minmax(20%, auto)); */
+
+  /* gap: 10px 20px; */
+  /* 위 해석 = row-gap: 10px; column-gap: 20px; */
+
+  /* gap: 20px; */
+  /* row-gap: 20px; column-gap: 20px; */
+  /* grid-auto-rows: minmax(100px, auto); */
+
+  grid-template-areas:
+    'header header header'
+    '   a    main    b   '
+    '   .     .      .   '
+    'footer footer footer';
+}
+
+.item:nth-child(1) {
+  /* grid-column: 1 / 3; */
+  /* grid-row: 1 / 2; */
+  /* 1번 라인에서 2칸 */
+  /* grid-column: 1 / span 2; */
+  /* 1번 라인에서 3칸 */
+  /* grid-row: 1 / span 3; */
+}
+
+.header {
+  grid-area: header;
+  height: 100px;
+}
+.sidebar-a {
+  grid-area: a;
+}
+.main-content {
+  grid-area: main;
+  background-color: aquamarine;
+  font-size: 100px;
+}
+.sidebar-b {
+  grid-area: b;
+}
+.footer {
+  grid-area: footer;
+}
